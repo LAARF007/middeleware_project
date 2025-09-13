@@ -1,40 +1,40 @@
 basePath: /
 definitions:
-  models.Collection:
+  models.User:
     properties:
-      content:
-        type: string
       id:
+        type: string
+      name:
         type: string
     type: object
 info:
   contact:
     email: justine.bachelard@ext.uca.fr
     name: Justine Bachelard.
-  description: API to manage collections.
+  description: API to manage users.
   title: middleware/example
   version: 1.0.0
 paths:
-  /collections:
+  /users:
     get:
-      description: Get collections.
+      description: Get all users.
       responses:
         "200":
           description: OK
           schema:
             items:
-              $ref: '#/definitions/models.Collection'
+              $ref: '#/definitions/models.User'
             type: array
         "500":
           description: Something went wrong
-      summary: Get collections.
+      summary: Get all users.
       tags:
-      - collections
-  /collections/{id}:
+      - users
+  /users/{id}:
     get:
-      description: Get a collection.
+      description: Get a user.
       parameters:
-      - description: Collection UUID formatted ID
+      - description: User UUID formatted ID
         in: path
         name: id
         required: true
@@ -43,14 +43,14 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/models.Collection'
+            $ref: '#/definitions/models.User'
         "422":
           description: Cannot parse id
         "500":
           description: Something went wrong
-      summary: Get a collection.
+      summary: Get a user.
       tags:
-      - collections
+      - users
 schemes:
 - http
 swagger: "2.0"

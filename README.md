@@ -14,11 +14,11 @@ go run cmd/main.go
 ---
 Or build : 
 ```
-go build -o middleware_collections cmd/main.go
+go build -o middleware_users cmd/main.go
 ```
 Then run : 
 ```
-./middleware_collections
+./middleware_users
 ```
 
 ## Documentation
