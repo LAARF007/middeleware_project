@@ -18,20 +18,20 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/collections": {
+        "/users": {
             "get": {
-                "description": "Get collections.",
+                "description": "Get all users.",
                 "tags": [
-                    "collections"
+                    "users"
                 ],
-                "summary": "Get collections.",
+                "summary": "Get all users.",
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/models.Collection"
+                                "$ref": "#/definitions/models.User"
                             }
                         }
                     },
@@ -41,17 +41,17 @@ const docTemplate = `{
                 }
             }
         },
-        "/collections/{id}": {
+        "/users/{id}": {
             "get": {
-                "description": "Get a collection.",
+                "description": "Get a user.",
                 "tags": [
-                    "collections"
+                    "users"
                 ],
-                "summary": "Get a collection.",
+                "summary": "Get a user.",
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Collection UUID formatted ID",
+                        "description": "User UUID formatted ID",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -61,7 +61,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/models.Collection"
+                            "$ref": "#/definitions/models.User"
                         }
                     },
                     "422": {
@@ -75,13 +75,13 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "models.Collection": {
+        "models.User": {
             "type": "object",
             "properties": {
-                "content": {
+                "id": {
                     "type": "string"
                 },
-                "id": {
+                "name": {
                     "type": "string"
                 }
             }
@@ -96,7 +96,7 @@ var SwaggerInfo = &swag.Spec{
 	BasePath:         "/",
 	Schemes:          []string{"http"},
 	Title:            "middleware/example",
-	Description:      "API to manage collections.",
+	Description:      "API to manage users.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

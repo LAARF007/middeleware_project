@@ -4,7 +4,7 @@
     ],
     "swagger": "2.0",
     "info": {
-        "description": "API to manage collections.",
+        "description": "API to manage users.",
         "title": "middleware/example",
         "contact": {
             "name": "Justine Bachelard.",
@@ -14,20 +14,20 @@
     },
     "basePath": "/",
     "paths": {
-        "/collections": {
+        "/users": {
             "get": {
-                "description": "Get collections.",
+                "description": "Get all users.",
                 "tags": [
-                    "collections"
+                    "users"
                 ],
-                "summary": "Get collections.",
+                "summary": "Get all users.",
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/models.Collection"
+                                "$ref": "#/definitions/models.User"
                             }
                         }
                     },
@@ -37,17 +37,17 @@
                 }
             }
         },
-        "/collections/{id}": {
+        "/users/{id}": {
             "get": {
-                "description": "Get a collection.",
+                "description": "Get a user.",
                 "tags": [
-                    "collections"
+                    "users"
                 ],
-                "summary": "Get a collection.",
+                "summary": "Get a user.",
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Collection UUID formatted ID",
+                        "description": "User UUID formatted ID",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -57,7 +57,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/models.Collection"
+                            "$ref": "#/definitions/models.User"
                         }
                     },
                     "422": {
@@ -71,13 +71,13 @@
         }
     },
     "definitions": {
-        "models.Collection": {
+        "models.User": {
             "type": "object",
             "properties": {
-                "content": {
+                "id": {
                     "type": "string"
                 },
-                "id": {
+                "name": {
                     "type": "string"
                 }
             }
