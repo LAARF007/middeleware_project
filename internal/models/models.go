@@ -5,11 +5,6 @@ import (
 	"time"
 )
 
-type User struct {
-	Id   *uuid.UUID `json:"id"`
-	Name string     `json:"name"`
-}
-
 type Event struct {
 	ID          uuid.UUID `json:"id"`          // UUID
 	AgendaIDs   []string  `json:"agendaIds"`   // Liste d’agendas concernés
