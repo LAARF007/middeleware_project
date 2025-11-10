@@ -1,0 +1,100 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"projetgoo/internal/controllers"
+	"projetgoo/internal/helpers"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/sirupsen/logrus"
+)
+
+func main() {
+	r := chi.NewRouter()
+
+	// Routes Alerts
+	r.Route("/alerts", func(r chi.Router) {
+		r.Get("/", controllers.GetAllAlerts) // GET /alerts
+
+		r.Route("/{id}", func(r chi.Router) {
+			r.Use(controllers.ContextIDs("alertId")) // Middleware pour récupérer alertId
+			r.Get("/", controllers.GetAlertByID)     // GET /alerts/{id}
+		})
+	})
+
+	// Routes Agendas
+	r.Route("/agendas", func(r chi.Router) {
+		r.Get("/", controllers.GetAllAgendas) // GET /agendas
+
+		r.Route("/{id}", func(r chi.Router) {
+			r.Use(controllers.ContextIDs("agendaId")) // Middleware pour récupérer agendaId
+			r.Get("/", controllers.GetAgendaByID)     // GET /agendas/{id}
+		})
+	})
+
+	logrus.Info("[INFO] Web server started. Now listening on *:8080")
+	logrus.Fatalln(http.ListenAndServe(":8080", r))
+}
+
+func init() {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		logrus.Fatalf("error while opening database : %s", err.Error())
+	}
+
+	// Création des tables si elles n'existent pas
+	schemes := []string{
+		`CREATE TABLE IF NOT EXISTS agendas (
+			id VARCHAR(3) PRIMARY KEY NOT NULL UNIQUE,
+			ucaId INTEGER NOT NULL,
+			name VARCHAR(255) NOT NULL
+		);`,
+		`CREATE TABLE IF NOT EXISTS alerts (
+			id VARCHAR(3) PRIMARY KEY NOT NULL UNIQUE,
+			email VARCHAR(255) NOT NULL,
+			agendaId VARCHAR(3) NOT NULL,
+			FOREIGN KEY(agendaId) REFERENCES agendas(id)
+		);`,
+	}
+
+	for _, scheme := range schemes {
+		if _, err := db.Exec(scheme); err != nil {
+			logrus.Fatalln("Could not generate table ! Error was : " + err.Error())
+		}
+	}
+
+	// Vérifier si la table agendas est vide
+	var count int
+	err = db.QueryRow(`SELECT COUNT(*) FROM agendas`).Scan(&count)
+	if err != nil {
+		logrus.Fatalf("Could not count agendas: %v", err)
+	}
+
+	if count == 0 {
+		// IDs simples de 3 caractères
+		agendaIDs := []string{"A01", "B02", "C03", "D04"}
+		alertIDs := []string{"X01", "Y02", "Z03", "W04"}
+
+		// Insertion des agendas et des alerts
+		for i := 0; i < 4; i++ {
+			_, err := db.Exec(`INSERT INTO agendas (id, ucaId, name) VALUES (?, ?, ?)`,
+				agendaIDs[i], i+1, fmt.Sprintf("Agenda %d", i+1))
+			if err != nil {
+				logrus.Warnf("Could not insert agenda: %v", err)
+			}
+
+			_, err = db.Exec(`INSERT INTO alerts (id, email, agendaId) VALUES (?, ?, ?)`,
+				alertIDs[i], fmt.Sprintf("user%d@example.com", i+1), agendaIDs[i])
+			if err != nil {
+				logrus.Warnf("Could not insert alert: %v", err)
+			}
+		}
+
+		logrus.Info("Initial data inserted into agendas and alerts")
+	} else {
+		logrus.Info("Agendas table already populated, skipping initial data insert")
+	}
+
+	helpers.CloseDB(db)
+}
