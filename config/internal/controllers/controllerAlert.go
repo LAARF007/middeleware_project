@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"encoding/json"
+	"middleware/example/internal/helpers"
+	"middleware/example/internal/services"
 	"net/http"
-	"projetgoo/internal/helpers"
-	"projetgoo/internal/services"
 
 	"github.com/gofrs/uuid"
 )

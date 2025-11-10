@@ -1,4 +1,4 @@
-module projetgoo
+module middleware/example
 
 go 1.25.2
 

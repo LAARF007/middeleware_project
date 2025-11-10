@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"projetgoo/internal/helpers"
-	"projetgoo/internal/models"
+	"middleware/example/internal/helpers"
+	"middleware/example/internal/models"
 
 	"github.com/gofrs/uuid"
 )

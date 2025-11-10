@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08cd48eb-0962-4226-8dbb-c910651da46a" name="Changes" comment="timetable and scheduler" />
+    <list default="true" id="08cd48eb-0962-4226-8dbb-c910651da46a" name="Changes" comment="timetable and scheduler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,8 +87,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762796772438</updated>
-      <workItem from="1762796773485" duration="921000" />
+      <workItem from="1762796773485" duration="1141000" />
     </task>
+    <task id="LOCAL-00001" summary="timetable and scheduler">
+      <option name="closed" value="true" />
+      <created>1762797867284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762797867284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

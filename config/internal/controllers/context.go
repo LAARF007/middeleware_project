@@ -3,11 +3,11 @@ package controllers
 import (
 	"context"
 	"fmt"
-	"net/http"
-	"projetgoo/internal/helpers"
-	"projetgoo/internal/models"
-
 	"github.com/go-chi/chi/v5"
+	"middleware/example/internal/helpers"
+	"middleware/example/internal/models"
+	"net/http"
+
 	"github.com/gofrs/uuid"
 )
 

@@ -2,8 +2,8 @@ package helpers
 
 import (
 	"encoding/json"
+	"middleware/example/internal/models"
 	"net/http"
-	"projetgoo/internal/models"
 )
 
 // RespondError convertit une erreur custom en code HTTP et body JSON

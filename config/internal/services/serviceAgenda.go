@@ -3,8 +3,8 @@ package services
 import (
 	"database/sql"
 	"fmt"
-	"projetgoo/internal/models"
-	repository "projetgoo/internal/repositories"
+	"middleware/example/internal/models"
+	repository "middleware/example/internal/repositories"
 
 	"github.com/gofrs/uuid"
 	"github.com/sirupsen/logrus"

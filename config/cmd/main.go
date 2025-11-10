@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-	"projetgoo/internal/controllers"
-	"projetgoo/internal/helpers"
-
 	"github.com/go-chi/chi/v5"
+	"middleware/example/internal/controllers"
+	"middleware/example/internal/helpers"
+	"net/http"
+
 	"github.com/sirupsen/logrus"
 )
 
