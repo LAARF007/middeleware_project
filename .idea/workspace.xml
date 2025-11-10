@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08cd48eb-0962-4226-8dbb-c910651da46a" name="Changes" comment="timetable and scheduler">
+      <change afterPath="$PROJECT_DIR$/.idea/JetClient/state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b717b1d26ea9a974152d90b1d2c024e22af18836" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b717b1d26ea9a974152d90b1d2c024e22af18836" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/JetClient/state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/scheduler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/issuestore/9/3/93310a20c22640d80343161f98be28beb14eb4e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/issuestore/c/4/c47645c391ad0571c40779079363c9d48412e18b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/securityhotspotstore/9/3/93310a20c22640d80343161f98be28beb14eb4e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/securityhotspotstore/c/4/c47645c391ad0571c40779079363c9d48412e18b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/JetClient/state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/0/c/0c0f4077b2627aacc710375e252455ed4ee34e09" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/1/2/1217f3a331878fc05e737ca2361b6067890770cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/2/2/228cd11054eda47c02b80ef8cfb1415b67e88137" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/3/4/34495dff11adca0c93e8449c9c3f349dbc3c8e8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/3/4/346e441da9ce5ba8f041057e93b89142a54ab579" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/5/5/5556c91a02dd5f91895f1bf541ca14ef96f644ba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/5/6/56e2ba51b4c72f229bed89a0ba255ee6c414e1ee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/5/7/57d8492fc997473a006eeb5d09677efdcccdec4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/5/a/5aa1ac64de2b0c4821af9393b44965020e4a521d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/5/d/5d8a7ac36c91059a3777aea9b9ae1a00fb9dd11a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/6/8/688faabdd2a347db7899dcea44464526e9b6addf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/7/1/71b8154e8f1c4bcdea6b734ea6570e4038176447" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/7/7/77830dfc0c3ae41bd3a1ba3aee0b7127d84643c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/9/3/93310a20c22640d80343161f98be28beb14eb4e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/a/6/a6ae363f4b6f92bee5b1239d2a776a23410308a4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/c/4/c47645c391ad0571c40779079363c9d48412e18b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/e/3/e30bcb102210a3f0e8ae9741403d3489ef027fb1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/f/4/f4a6e4b95492d9346b98581cb4b32c7dba88026c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/0/c/0c0f4077b2627aacc710375e252455ed4ee34e09" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/1/2/1217f3a331878fc05e737ca2361b6067890770cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/2/2/228cd11054eda47c02b80ef8cfb1415b67e88137" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/3/4/34495dff11adca0c93e8449c9c3f349dbc3c8e8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/3/4/346e441da9ce5ba8f041057e93b89142a54ab579" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/5/5/5556c91a02dd5f91895f1bf541ca14ef96f644ba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/5/6/56e2ba51b4c72f229bed89a0ba255ee6c414e1ee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/5/7/57d8492fc997473a006eeb5d09677efdcccdec4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/5/a/5aa1ac64de2b0c4821af9393b44965020e4a521d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/5/d/5d8a7ac36c91059a3777aea9b9ae1a00fb9dd11a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/6/8/688faabdd2a347db7899dcea44464526e9b6addf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/7/1/71b8154e8f1c4bcdea6b734ea6570e4038176447" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/7/7/77830dfc0c3ae41bd3a1ba3aee0b7127d84643c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/9/3/93310a20c22640d80343161f98be28beb14eb4e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/a/6/a6ae363f4b6f92bee5b1239d2a776a23410308a4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/c/4/c47645c391ad0571c40779079363c9d48412e18b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/e/3/e30bcb102210a3f0e8ae9741403d3489ef027fb1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/f/4/f4a6e4b95492d9346b98581cb4b32c7dba88026c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timetable/.idea/tp_middleware_example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/api/docs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/api/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/api/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/timetable.db" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/cmd/timetable.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/docs/docs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/docs/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/docs/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controllers/events/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/controllers/events/context.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controllers/events/get_event.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/controllers/events/get_event.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controllers/events/get_events.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/controllers/events/get_events.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/helpers/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/helpers/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/helpers/error_responder.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/helpers/error_responder.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/models/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/models/errors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repositories/events/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/repositories/events/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/services/events/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/services/events/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/swagger_expose.go" beforeDir="false" afterPath="$PROJECT_DIR$/timetable/internal/swagger_expose.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timetable" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.db" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="35ITq0FQgzJb12HVTM2c2AsjZyV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Caisse/OneDrive/Desktop/M1 info/projets/tp_middleware_example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="tp_middleware_example" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="tp_middleware_example" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="tp_middleware_example" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="tp_middleware_example" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08cd48eb-0962-4226-8dbb-c910651da46a" name="Changes" comment="" />
+      <created>1762796772438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762796772438</updated>
+      <workItem from="1762796773485" duration="396000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="timetable and scheduler" />
+    <option name="LAST_COMMIT_MESSAGE" value="timetable and scheduler" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
