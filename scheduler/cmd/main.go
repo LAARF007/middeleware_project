@@ -43,7 +43,8 @@ func main() {
 		} else {
 			if currentlyParsing {
 				if strings.HasPrefix(line, "END:VEVENT") {
-					fmt.Println(tmpObj)
+					// Affichage amélioré
+					printEvent(tmpObj)
 					tmpObj = map[string]interface{}{}
 					currentlyParsing = false
 				} else {
@@ -58,12 +59,13 @@ func main() {
 						tmpObj["end"], _ = time.Parse("20060102T150405Z", strings.Replace(strings.Replace(line, "DTEND:", "", 1), "\r", "", 1))
 					}
 					if strings.HasPrefix(line, "SUMMARY:") {
-						// Attention, le dernier caractère est un "carriage return" (\r). On le supprime sinon ça fait échouer toute notre logique.
 						tmpObj["summary"] = strings.Replace(strings.Replace(line, "SUMMARY:", "", 1), "\r", "", 1)
 					}
 					if strings.HasPrefix(line, "LOCATION:") {
-						// Attention, le dernier caractère est un "carriage return" (\r). On le supprime sinon ça fait échouer toute notre logique.
 						tmpObj["location"] = strings.Replace(strings.Replace(line, "LOCATION:", "", 1), "\r", "", 1)
+					}
+					if strings.HasPrefix(line, "DESCRIPTION:") {
+						tmpObj["description"] = strings.Replace(strings.Replace(line, "DESCRIPTION:", "", 1), "\r", "", 1)
 					}
 					if strings.HasPrefix(line, "LAST-MODIFIED:") {
 						tmpObj["last-modified"], _ = time.Parse("20060102T150405Z", strings.Replace(strings.Replace(line, "LAST-MODIFIED:", "", 1), "\r", "", 1))
@@ -73,6 +75,47 @@ func main() {
 				continue
 			}
 		}
-
 	}
+}
+
+func printEvent(event map[string]interface{}) {
+	fmt.Println("=" + strings.Repeat("=", 80))
+
+	// Titre du cours
+	if summary, ok := event["summary"].(string); ok {
+		fmt.Printf("📚 COURS: %s\n", summary)
+	}
+
+	// Dates et heures
+	if start, ok := event["start"].(time.Time); ok {
+		if end, ok := event["end"].(time.Time); ok {
+			fmt.Printf("📅 DATE: %s\n", start.Format("Monday 02/01/2006"))
+			fmt.Printf("🕐 HORAIRE: %s - %s\n", start.Format("15:04"), end.Format("15:04"))
+
+			duration := end.Sub(start)
+			fmt.Printf("⏱️  DURÉE: %s\n", duration)
+		}
+	}
+
+	// Lieu
+	if location, ok := event["location"].(string); ok && location != "" {
+		fmt.Printf("📍 LIEU: %s\n", location)
+	}
+
+	// Description (enseignant, groupe)
+	if desc, ok := event["description"].(string); ok && desc != "" {
+		// Nettoyer la description
+		desc = strings.ReplaceAll(desc, "\\n", " ")
+		desc = strings.TrimSpace(desc)
+		if desc != "" {
+			fmt.Printf("👤 INFO: %s\n", desc)
+		}
+	}
+
+	// Dernière modification
+	if lastMod, ok := event["last-modified"].(time.Time); ok {
+		fmt.Printf("🔄 Modifié le: %s\n", lastMod.Format("02/01/2006 à 15:04"))
+	}
+
+	fmt.Println()
 }

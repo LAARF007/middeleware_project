@@ -5,13 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08cd48eb-0962-4226-8dbb-c910651da46a" name="Changes" comment="timetable and scheduler">
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/1/2/1217f3a331878fc05e737ca2361b6067890770cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/1/7/1790eb5ee5b11792c2335ac2f0e9b6ee0cd0a42b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/1/a/1a545e1b63e80361224442563008e96d72cef9df" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/1/a/1a8072ca60c48cd8dca0a0d37c4a2b96aa2c30a1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/2/3/23e01d1387fd0d009cd95bc392880e34a58d175f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/3/e/3e53cd1664c4b88d3e3d3aad7e893a7166938888" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/4/5/45649a90cd338eee0b1146cc9ae6ec0499f2c428" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/4/e/4e6e58e82ecfa92cb3dbfc711b374423ae3639d2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/5/e/5e568b6000d97291096b2d8c656e199063d1f2e1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/6/9/69f11ccf63db45c2a32a6c13fff4c2a7d08b8d3f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/8/1/815d943a34759f08d88556deb52e29da1b73ecec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/8/5/85487fc2ba5c65f3978510d5f9cefbeb666dfda9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/8/d/8db1f4a28565cbcb9ed04b82a20f89412222a111" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/9/4/9477d1692bd3d65d51673c7a40670767b52c7862" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/a/1/a1f777a5f1e301f75af06d78c56e7cf15a1324bf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/b/8/b887fef58304ce13e2d3bb4ef64e59caa4444c5b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/b/b/bb1bed9c1ef9648d320610ca6268b5b8bfd5cd99" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/c/3/c3b0195343afa972ec0b8191da6a0059e378599a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/1/2/1217f3a331878fc05e737ca2361b6067890770cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/1/7/1790eb5ee5b11792c2335ac2f0e9b6ee0cd0a42b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/1/a/1a545e1b63e80361224442563008e96d72cef9df" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/1/a/1a8072ca60c48cd8dca0a0d37c4a2b96aa2c30a1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/2/3/23e01d1387fd0d009cd95bc392880e34a58d175f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/3/e/3e53cd1664c4b88d3e3d3aad7e893a7166938888" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/4/5/45649a90cd338eee0b1146cc9ae6ec0499f2c428" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/4/e/4e6e58e82ecfa92cb3dbfc711b374423ae3639d2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/5/e/5e568b6000d97291096b2d8c656e199063d1f2e1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/6/9/69f11ccf63db45c2a32a6c13fff4c2a7d08b8d3f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/8/1/815d943a34759f08d88556deb52e29da1b73ecec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/8/5/85487fc2ba5c65f3978510d5f9cefbeb666dfda9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/8/d/8db1f4a28565cbcb9ed04b82a20f89412222a111" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/9/4/9477d1692bd3d65d51673c7a40670767b52c7862" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/a/1/a1f777a5f1e301f75af06d78c56e7cf15a1324bf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/b/8/b887fef58304ce13e2d3bb4ef64e59caa4444c5b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/b/b/bb1bed9c1ef9648d320610ca6268b5b8bfd5cd99" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/c/3/c3b0195343afa972ec0b8191da6a0059e378599a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/config/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/config/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.2.windows-amd64" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -32,9 +75,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Caisse/OneDrive/Desktop/M1 info/projets/tp_middleware_example&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -88,6 +133,8 @@
       <option name="presentableId" value="Default" />
       <updated>1762796772438</updated>
       <workItem from="1762796773485" duration="1141000" />
+      <workItem from="1762804656394" duration="7000" />
+      <workItem from="1762804738740" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="timetable and scheduler">
       <option name="closed" value="true" />

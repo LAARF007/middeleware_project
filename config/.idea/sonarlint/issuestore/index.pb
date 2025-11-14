@@ -41,3 +41,9 @@ G.idea/sonarlint/issuestore/9/3/93310a20c22640d80343161f98be28beb14eb4e9,2\3\23
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 Å
 Q.idea/sonarlint/securityhotspotstore/9/3/93310a20c22640d80343161f98be28beb14eb4e9,c\3\c3b0195343afa972ec0b8191da6a0059e378599a
+I
+internal/models/agenda.go,8\1\815d943a34759f08d88556deb52e29da1b73ecec
+H
+internal/models/alert.go,1\a\1a545e1b63e80361224442563008e96d72cef9df
+M
+internal/helpers/databases.go,5\e\5e568b6000d97291096b2d8c656e199063d1f2e1

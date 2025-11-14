@@ -3,3 +3,5 @@
 cmd/main.go,9\3\93310a20c22640d80343161f98be28beb14eb4e9
 6
 go.mod,c\4\c47645c391ad0571c40779079363c9d48412e18b
+L
+internal/services/service.go,f\c\fcb94c36699e5d43d6b998a58b03154081c2acdc
