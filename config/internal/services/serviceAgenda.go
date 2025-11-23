@@ -38,3 +38,21 @@ func GetAgendaByID(id uuid.UUID) (*models.Agenda, error) {
 
 	return agenda, nil
 }
+
+func DeleteAgenda(id uuid.UUID) error {
+	err := repository.DeleteAgenda(id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return &models.ErrorNotFound{
+				Message: "Agenda non trouvé",
+			}
+		}
+
+		logrus.Errorf("Erreur lors de la suppression de l'agenda %s : %s", id.String(), err.Error())
+		return &models.ErrorGeneric{
+			Message: fmt.Sprintf("Une erreur est survenue lors de la suppression de l'agenda %s", id.String()),
+		}
+	}
+
+	return nil
+}

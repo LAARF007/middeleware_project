@@ -44,3 +44,21 @@ func GetAgendaByID(w http.ResponseWriter, r *http.Request) {
 	body, _ := json.Marshal(agenda)
 	_, _ = w.Write(body)
 }
+
+func DeleteAgenda(w http.ResponseWriter, r *http.Request) {
+	id := r.Context().Value("agendaId").(uuid.UUID)
+
+	err := services.DeleteAgenda(id)
+	if err != nil {
+		body, status := helpers.RespondError(err)
+		w.WriteHeader(status)
+		if body != nil {
+			_, _ = w.Write(body)
+		}
+		return
+	}
+
+	helpers.JSON(w, http.StatusOK, map[string]string{
+		"message": "Agenda supprimé avec succès",
+	})
+}

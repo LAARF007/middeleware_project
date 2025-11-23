@@ -2,6 +2,8 @@ package helpers
 
 import (
 	"database/sql"
+	"encoding/json"
+	"net/http"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/sirupsen/logrus"
@@ -33,4 +35,9 @@ func CloseDB(db *sql.DB) {
 	if err := db.Close(); err != nil {
 		logrus.Errorf("Erreur lors de la fermeture de la base : %s", err.Error())
 	}
+}
+func JSON(w http.ResponseWriter, status int, data interface{}) {
+	w.WriteHeader(status)
+	body, _ := json.Marshal(data)
+	_, _ = w.Write(body)
 }

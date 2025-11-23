@@ -29,7 +29,8 @@ func main() {
 
 		r.Route("/{id}", func(r chi.Router) {
 			r.Use(controllers.ContextIDs("agendaId")) // Middleware pour récupérer agendaId
-			r.Get("/", controllers.GetAgendaByID)     // GET /agendas/{id}
+			r.Get("/", controllers.GetAgendaByID)
+			r.Delete("/", controllers.DeleteAgenda)
 		})
 	})
 

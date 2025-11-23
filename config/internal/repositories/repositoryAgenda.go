@@ -1,6 +1,7 @@
 package repositories
 
 import (
+	"database/sql"
 	"middleware/example/internal/helpers"
 	"middleware/example/internal/models"
 
@@ -50,4 +51,24 @@ func GetAgendaByID(id uuid.UUID) (*models.Agenda, error) {
 	a.ID, _ = uuid.FromString(idStr)
 
 	return &a, nil
+}
+
+func DeleteAgenda(id uuid.UUID) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	result, err := db.Exec(`DELETE FROM agendas WHERE id = ?`, id.String())
+	if err != nil {
+		return err
+	}
+
+	rows, _ := result.RowsAffected()
+	if rows == 0 {
+		return sql.ErrNoRows
+	}
+
+	return nil
 }
