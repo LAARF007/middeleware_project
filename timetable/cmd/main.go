@@ -10,6 +10,8 @@ import (
 	_ "middleware/example/internal/models"
 	//"middleware/example/internal/repositories/events"
 	"net/http"
+	"github.com/gofrs/uuid"
+
 )
 
 func main() {
@@ -42,7 +44,7 @@ func init() {
 	schemes := []string{
 		`CREATE TABLE IF NOT EXISTS events (
 			id VARCHAR(255) PRIMARY KEY NOT NULL UNIQUE,
-			uid VARCHAR(255),
+			uid VARCHAR(255) UNIQUE,
 			name VARCHAR(255) NOT NULL,
 			description TEXT,
 			start TIMESTAMP,
@@ -75,14 +77,15 @@ func InsertEvent() error {
 	) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 	`
 
+	id := uuid.Must(uuid.NewV4())
 	_, err = db.Exec(query,
-		"62a2beca-26cf-45bf-aa82-4cf5b14922fd",
-		"ADE60323032342d323032352d5543412d36303334342d302d32",
-		"TD Entrepôt de données - G1",
-		"\n\nM1 GROUPE 1 langue\nPAILLOUX MARIE\n\n(Updated :26/11/2024 09:51)",
-		"2025-01-23T15:45:00+01:00",
-		"2025-01-23T17:45:00+01:00",
-		"IS_A104",
+		id.String(),
+		"ADE60323032352d323032362d5543412d32353834382d322d30",
+		"TD Culture d'entreprise G1",
+		"\n\nM1 GROUPE 1 langue\nLACHENAUD SOPHIE\n\n(Updated :06/11/2025 12:58)",
+		"2025-11-21T15:45:00+01:00",
+		"2025-11-21T17:45:00+01:00",
+		"IS_A208",
 		"2024-11-26T09:51:00+01:00",
 		`["d5c60e7a-10cd-4aec-9ea5-96d071ba824b"]`,
 	)
