@@ -115,6 +115,14 @@ func CreateAlert(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
+	if alert == nil {
+		body, status := helpers.RespondError(&models.ErrorBadRequest{
+			Message: "L'agenda spécifié n'existe pas",
+		})
+		w.WriteHeader(status)
+		_, _ = w.Write(body)
+		return
+	}
 
 	helpers.JSON(w, http.StatusCreated, alert)
 }

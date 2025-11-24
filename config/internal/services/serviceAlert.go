@@ -58,6 +58,23 @@ func DeleteAlert(id uuid.UUID) error {
 }
 
 func CreateAlert(email string, agendaId uuid.UUID) (*models.Alert, error) {
+
+	// --- Vérifier que l'agenda existe ---
+	exists, err := repository.GetAgendaByID(agendaId)
+	if err != nil {
+		logrus.Errorf("Erreur vérification agenda %s : %s", agendaId.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la vérification de l'agenda",
+		}
+	}
+
+	if exists == nil {
+		return nil, &models.ErrorGeneric{
+			Message: "L'agenda spécifié n'existe pas",
+		}
+	}
+
+	// generate uuid
 	newID, err := uuid.NewV4()
 	if err != nil {
 		return nil, &models.ErrorGeneric{
