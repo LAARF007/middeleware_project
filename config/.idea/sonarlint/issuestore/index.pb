@@ -47,3 +47,9 @@ H
 internal/models/alert.go,1\a\1a545e1b63e80361224442563008e96d72cef9df
 M
 internal/helpers/databases.go,5\e\5e568b6000d97291096b2d8c656e199063d1f2e1
+I
+internal/models/errors.go,7\1\71b8154e8f1c4bcdea6b734ea6570e4038176447
+w
+G.idea/sonarlint/issuestore/7/1/71b8154e8f1c4bcdea6b734ea6570e4038176447,3\7\376a95faf6daafe2285c97188075309860603723
+Å
+Q.idea/sonarlint/securityhotspotstore/7/1/71b8154e8f1c4bcdea6b734ea6570e4038176447,f\3\f343ee888263c32e8c95ebb4535be7ce65f02675

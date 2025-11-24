@@ -56,3 +56,61 @@ func DeleteAgenda(id uuid.UUID) error {
 
 	return nil
 }
+
+func CreateAgenda(ucaId int, name string) (*models.Agenda, error) {
+	newID, err := uuid.NewV4()
+	if err != nil {
+		return nil, &models.ErrorGeneric{
+			Message: "Impossible de générer un UUID",
+		}
+	}
+
+	agenda := &models.Agenda{
+		ID:    newID, // ← UUID auto généré
+		UcaID: ucaId,
+		Name:  name,
+	}
+
+	err = repository.CreateAgenda(agenda)
+	if err != nil {
+
+		logrus.Errorf("Erreur création agenda %s : %s", newID.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la création de l'agenda",
+		}
+	}
+
+	return agenda, nil
+}
+
+func UpdateAgenda(id uuid.UUID, ucaId int, name string) (*models.Agenda, error) {
+	// Vérifier que l'agenda existe
+	_, err := repository.GetAgendaByID(id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, &models.ErrorNotFound{
+				Message: "Agenda non trouvé",
+			}
+		}
+		logrus.Errorf("Erreur lors de la récupération de l'agenda %s : %s", id.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la vérification de l'agenda",
+		}
+	}
+
+	agenda := &models.Agenda{
+		ID:    id,
+		UcaID: ucaId,
+		Name:  name,
+	}
+
+	err = repository.UpdateAgenda(agenda)
+	if err != nil {
+		logrus.Errorf("Erreur mise à jour agenda %s : %s", id.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la mise à jour de l'agenda",
+		}
+	}
+
+	return agenda, nil
+}

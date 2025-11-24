@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"middleware/example/internal/helpers"
+	"middleware/example/internal/models"
 	"middleware/example/internal/services"
 	"net/http"
 
@@ -61,4 +62,80 @@ func DeleteAgenda(w http.ResponseWriter, r *http.Request) {
 	helpers.JSON(w, http.StatusOK, map[string]string{
 		"message": "Agenda supprimé avec succès",
 	})
+}
+
+func CreateAgenda(w http.ResponseWriter, r *http.Request) {
+	var input struct {
+		UcaId int    `json:"ucaId"`
+		Name  string `json:"name"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
+		body, status := helpers.RespondError(&models.ErrorBadRequest{
+			Message: "Données invalides",
+		})
+		w.WriteHeader(status)
+		_, _ = w.Write(body)
+		return
+	}
+
+	if input.Name == "" {
+		body, status := helpers.RespondError(&models.ErrorBadRequest{
+			Message: "Champ 'name' obligatoire",
+		})
+		w.WriteHeader(status)
+		_, _ = w.Write(body)
+		return
+	}
+
+	agenda, err := services.CreateAgenda(input.UcaId, input.Name)
+	if err != nil {
+		body, status := helpers.RespondError(err)
+		w.WriteHeader(status)
+		if body != nil {
+			_, _ = w.Write(body)
+		}
+		return
+	}
+
+	helpers.JSON(w, http.StatusCreated, agenda)
+}
+
+func UpdateAgenda(w http.ResponseWriter, r *http.Request) {
+	id := r.Context().Value("agendaId").(uuid.UUID)
+
+	var input struct {
+		UcaId int    `json:"ucaId"`
+		Name  string `json:"name"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
+		body, status := helpers.RespondError(&models.ErrorBadRequest{
+			Message: "Données invalides",
+		})
+		w.WriteHeader(status)
+		_, _ = w.Write(body)
+		return
+	}
+
+	if input.Name == "" {
+		body, status := helpers.RespondError(&models.ErrorBadRequest{
+			Message: "Champ 'name' obligatoire",
+		})
+		w.WriteHeader(status)
+		_, _ = w.Write(body)
+		return
+	}
+
+	agenda, err := services.UpdateAgenda(id, input.UcaId, input.Name)
+	if err != nil {
+		body, status := helpers.RespondError(err)
+		w.WriteHeader(status)
+		if body != nil {
+			_, _ = w.Write(body)
+		}
+		return
+	}
+
+	helpers.JSON(w, http.StatusOK, agenda)
 }

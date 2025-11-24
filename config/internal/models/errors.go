@@ -25,3 +25,11 @@ type ErrorUnprocessableEntity struct {
 func (e *ErrorUnprocessableEntity) Error() string {
 	return e.Message
 }
+
+type ErrorBadRequest struct {
+	Message string `json:"message"`
+}
+
+func (e *ErrorBadRequest) Error() string {
+	return e.Message
+}

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/go-chi/chi/v5"
+	"github.com/gofrs/uuid"
 	"middleware/example/internal/controllers"
 	"middleware/example/internal/helpers"
 	"net/http"
@@ -26,11 +27,13 @@ func main() {
 	// Routes Agendas
 	r.Route("/agendas", func(r chi.Router) {
 		r.Get("/", controllers.GetAllAgendas) // GET /agendas
-
+		r.Post("/", controllers.CreateAgenda)
 		r.Route("/{id}", func(r chi.Router) {
 			r.Use(controllers.ContextIDs("agendaId")) // Middleware pour récupérer agendaId
 			r.Get("/", controllers.GetAgendaByID)
 			r.Delete("/", controllers.DeleteAgenda)
+			r.Put("/", controllers.UpdateAgenda)
+
 		})
 	})
 
@@ -65,14 +68,39 @@ func init() {
 		}
 	}
 
-	// Vérifier si la table agendas est vide
-	var count int
-	err = db.QueryRow(`SELECT COUNT(*) FROM agendas`).Scan(&count)
+	query := `INSERT INTO agendas (id, ucaId, name) VALUES (?, ?, ?)`
+
+	id := uuid.Must(uuid.NewV4())
+	_, err = db.Exec(query,
+		id.String(),
+		"56529",
+		"M1 - Tutorat L2",
+	)
+
 	if err != nil {
-		logrus.Fatalf("Could not count agendas: %v", err)
+		logrus.Warnf("Could not insert agenda: %v", err)
 	}
 
-	if count == 0 {
+	fmt.Println("Agenda inséré avec succès dans SQLite !")
+
+	//Alerts
+
+	/*query := `INSERT INTO alerts (id, email, agendaId) VALUES (?, ?, ?)`
+
+	id := uuid.Must(uuid.NewV4())
+	_, err = db.Exec(query,
+		id.String(),
+		"56529",
+		"M1 - Tutorat L2",
+	)
+
+	if err != nil {
+		logrus.Warnf("Could not insert alert: %v", err)
+	}
+
+	fmt.Println("Alerts inséré avec succès dans SQLite !")*/
+
+	/*if count == 0 {
 		// IDs simples de 3 caractères
 		agendaIDs := []string{"A01", "B02", "C03", "D04"}
 		alertIDs := []string{"X01", "Y02", "Z03", "W04"}
@@ -95,7 +123,7 @@ func init() {
 		logrus.Info("Initial data inserted into agendas and alerts")
 	} else {
 		logrus.Info("Agendas table already populated, skipping initial data insert")
-	}
+	}*/
 
 	helpers.CloseDB(db)
 }
