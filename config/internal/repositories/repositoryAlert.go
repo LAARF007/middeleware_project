@@ -1,6 +1,7 @@
 package repositories
 
 import (
+	"database/sql"
 	"middleware/example/internal/helpers"
 	"middleware/example/internal/models"
 
@@ -52,4 +53,67 @@ func GetAlertByID(id uuid.UUID) (*models.Alert, error) {
 	al.AgendaID, _ = uuid.FromString(agendaIDStr)
 
 	return &al, nil
+}
+
+func DeleteAlert(id uuid.UUID) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	result, err := db.Exec(`DELETE FROM alerts WHERE id = ?`, id.String())
+	if err != nil {
+		return err
+	}
+
+	rows, _ := result.RowsAffected()
+	if rows == 0 {
+		return sql.ErrNoRows
+	}
+
+	return nil
+}
+
+func CreateAlert(a *models.Alert) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	_, err = db.Exec(
+		`INSERT INTO alerts (id, email, agendaId) VALUES (?, ?, ?)`,
+		a.ID.String(), a.Email, a.AgendaID,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func UpdateAlert(a *models.Alert) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	result, err := db.Exec(
+		`UPDATE alerts SET email = ?, agendaId = ? WHERE id = ?`,
+		a.Email, a.AgendaID, a.ID.String(),
+	)
+
+	if err != nil {
+		return err
+	}
+
+	rows, _ := result.RowsAffected()
+	if rows == 0 {
+		return sql.ErrNoRows
+	}
+
+	return nil
 }

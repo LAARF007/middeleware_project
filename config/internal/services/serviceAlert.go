@@ -38,3 +38,79 @@ func GetAlertByID(id uuid.UUID) (*models.Alert, error) {
 
 	return alert, nil
 }
+
+func DeleteAlert(id uuid.UUID) error {
+	err := repository.DeleteAlert(id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return &models.ErrorNotFound{
+				Message: "Alert non trouvé",
+			}
+		}
+
+		logrus.Errorf("Erreur lors de la suppression de l'alert %s : %s", id.String(), err.Error())
+		return &models.ErrorGeneric{
+			Message: fmt.Sprintf("Une erreur est survenue lors de la suppression de l'alert %s", id.String()),
+		}
+	}
+
+	return nil
+}
+
+func CreateAlert(email string, agendaId uuid.UUID) (*models.Alert, error) {
+	newID, err := uuid.NewV4()
+	if err != nil {
+		return nil, &models.ErrorGeneric{
+			Message: "Impossible de générer un UUID",
+		}
+	}
+
+	alert := &models.Alert{
+		ID:       newID, // ← UUID auto généré
+		Email:    email,
+		AgendaID: agendaId,
+	}
+
+	err = repository.CreateAlert(alert)
+	if err != nil {
+
+		logrus.Errorf("Erreur création alert %s : %s", newID.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la création de l'alert",
+		}
+	}
+
+	return alert, nil
+}
+
+func UpdateAlert(id uuid.UUID, email string, agendaId uuid.UUID) (*models.Alert, error) {
+	// Vérifier que l'alert existe
+	_, err := repository.GetAlertByID(id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, &models.ErrorNotFound{
+				Message: "Alert non trouvé",
+			}
+		}
+		logrus.Errorf("Erreur lors de la récupération de l'alert %s : %s", id.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la vérification de l'alert",
+		}
+	}
+
+	alert := &models.Alert{
+		ID:       id,
+		Email:    email,
+		AgendaID: agendaId,
+	}
+
+	err = repository.UpdateAlert(alert)
+	if err != nil {
+		logrus.Errorf("Erreur mise à jour alert %s : %s", id.String(), err.Error())
+		return nil, &models.ErrorGeneric{
+			Message: "Erreur lors de la mise à jour de l'alert",
+		}
+	}
+
+	return alert, nil
+}

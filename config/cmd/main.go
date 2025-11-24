@@ -17,10 +17,12 @@ func main() {
 	// Routes Alerts
 	r.Route("/alerts", func(r chi.Router) {
 		r.Get("/", controllers.GetAllAlerts) // GET /alerts
-
+		r.Post("/", controllers.CreateAlert)
 		r.Route("/{id}", func(r chi.Router) {
 			r.Use(controllers.ContextIDs("alertId")) // Middleware pour récupérer alertId
-			r.Get("/", controllers.GetAlertByID)     // GET /alerts/{id}
+			r.Get("/", controllers.GetAlertByID)
+			r.Delete("/", controllers.DeleteAlert)
+			r.Put("/", controllers.UpdateAlert)
 		})
 	})
 
